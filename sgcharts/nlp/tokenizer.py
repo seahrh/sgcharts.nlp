@@ -1,15 +1,15 @@
 __all__ = ['tok']
 
-import nlpx.util as util
-from nlpx.punctuation import TOKENIZER_INFIXES, TOKENIZER_PREFIXES, TOKENIZER_SUFFIXES
-from nlpx.tokenizer_exceptions import TOKENIZER_EXCEPTIONS
+from .util import compile_infix_regex, compile_prefix_regex, compile_suffix_regex
+from .punctuation import TOKENIZER_INFIXES, TOKENIZER_PREFIXES, TOKENIZER_SUFFIXES
+from .tokenizer_exceptions import TOKENIZER_EXCEPTIONS
 
 __prefixes = tuple(TOKENIZER_PREFIXES)
 __suffixes = tuple(TOKENIZER_SUFFIXES)
 __infixes = tuple(TOKENIZER_INFIXES)
-__prefix_search = (util.compile_prefix_regex(__prefixes).search if __prefixes else None)
-__suffix_search = (util.compile_suffix_regex(__suffixes).search if __suffixes else None)
-__infix_finditer = (util.compile_infix_regex(__infixes).finditer if __infixes else None)
+__prefix_search = (compile_prefix_regex(__prefixes).search if __prefixes else None)
+__suffix_search = (compile_suffix_regex(__suffixes).search if __suffixes else None)
+__infix_finditer = (compile_infix_regex(__infixes).finditer if __infixes else None)
 
 
 def __find_prefix(string):

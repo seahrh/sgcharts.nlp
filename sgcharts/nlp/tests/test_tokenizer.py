@@ -1,6 +1,6 @@
 # coding=utf-8
 import unittest
-from nlpx.tokenizer import *
+from sgcharts.nlp import tok
 
 
 class TestTokenizer(unittest.TestCase):
