@@ -48,3 +48,10 @@ class TestTokenizer(unittest.TestCase):
             "e - commerce .".split()
         a = tok(text)
         self.assertListEqual(a, e)
+
+    def test_split_sentences_on_whitespace_characters(self):
+        text = "first sentence.\n\t\rsecond sentence."
+        e = "first sentence . second sentence .".split()
+        a = tok(text)
+        print(a)
+        self.assertListEqual(a, e)

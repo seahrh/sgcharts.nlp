@@ -52,7 +52,7 @@ def __find_infix(string):
 def tok(text, special_cases=TOKENIZER_EXCEPTIONS, find_prefix=__find_prefix, find_suffix=__find_suffix,
         find_infixes=__find_infix):
     tokens = []
-    for substring in text.split(' '):
+    for substring in text.split():
         suffixes = []
         while substring:
             if special_cases is not None and substring in special_cases:
