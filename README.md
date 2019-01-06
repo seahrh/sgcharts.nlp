@@ -1,4 +1,7 @@
 # sgcharts.nlp
+
+[![Build Status](https://travis-ci.org/seahrh/sgcharts.nlp.svg?branch=master)](https://travis-ci.org/seahrh/sgcharts.nlp)
+
 python3 utilities for natural language processing (English)
 
 ## Usage
